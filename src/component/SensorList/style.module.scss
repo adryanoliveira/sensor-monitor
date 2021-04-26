@@ -1,0 +1,159 @@
+.container{
+    width: 30rem;
+    height: 100vh;
+    background-color: #121212;
+    display: flex; 
+    flex-direction: column;
+
+
+    header{
+        font-family: coves-bold;
+        font-weight: 800;
+        font-size: 1.5rem;
+        background-color: #0b5397;        
+        color: #fff;
+        display: inline-block;
+        box-sizing: border-box;
+
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+
+        img{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px;
+        }
+    }
+
+}
+
+.sensorsList{
+    flex-grow: 1; 
+    max-width: 100%; 
+    box-sizing: border-box;
+    overflow-y: scroll;
+    
+    .device{
+        height: 5rem;
+        box-sizing: border-box;
+        margin: 0.875rem;
+        border-radius: 10px;
+        position: relative;
+
+        background-color: #1e1e1e;
+        border: 2px solid #33cd5f;
+        animation: success 3s ease-in-out infinite;
+        
+        &.danger{
+            border: 2px solid #ffc900;
+            animation: danger 3s ease-in-out infinite;
+
+            button{
+                background-color: #ffc900;
+            }
+
+        }
+
+        &.fail{
+            border: 2px solid #ff4961;
+            animation: warning 3s ease-in-out infinite;
+
+            button{
+                background-color: #ff4961;
+            }
+        }
+
+        img{
+            height: 100%;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        span{
+            vertical-align: middle;
+            color: #fff;
+            font-family: coves;
+            font-weight: 800;
+            margin: 0 1.5rem;
+        }
+
+        button{
+            padding: 3px;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #33cd5f;
+            margin: 0 1rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: inline;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+@keyframes danger{
+    0%{
+        border-color: #1e1e1e;
+    }
+
+    25%{
+        border-color: #ffd534;
+    }
+
+    50%{
+        border-color: #ffd534;
+    }
+
+    100%{
+        border-color: #1e1e1e;
+    }
+}
+
+@keyframes warning {
+    0%{
+        border-color: #1e1e1e;
+    }
+
+    25%{
+        border-color: #ff4961;
+    }
+
+    50%{
+        border-color: #ff4961;
+    }
+
+    100%{
+        border-color: #1e1e1e;
+    }
+}
+
+@keyframes success {
+    0%{
+        border-color: #1e1e1e;
+    }
+
+    25%{
+        border-color: #2fdf75;;
+    }
+
+    50%{
+        border-color: #2fdf75;;
+    }
+
+    100%{
+        border-color: #1e1e1e;
+    }
+}
